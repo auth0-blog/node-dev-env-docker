@@ -283,6 +283,14 @@ I can retrive that data:
 curl 0.0.0.0:8080/tomato
 ```
 
+## Cleaning Up
+
+When I am doing with this development environment, I can run the following command to clean up:
+
+```bash
+docker-compose down -v
+```
+
 ## Conclusion
 
 Cool. Just like that I have a Node API connected to a Redis store to handle some data. All this was done just by installing and using Docker. Nothing else. If you clone this repo and want to run the app, all you have to do after cloning it is run:
@@ -290,4 +298,3 @@ Cool. Just like that I have a Node API connected to a Redis store to handle some
 ```
 docker-compose up
 ```
-
