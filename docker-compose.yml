@@ -1,0 +1,20 @@
+version: "3"
+services:
+  web:
+    image: node:10.15.0
+    command: sh -c "npm install && npm start"
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - 8080:8080
+    environment:
+      - PORT=8080
+      - REDIS_URL=redis://cache
+    links:
+      - data
+  data:
+    image: redis
+    container_name: cache
+    expose: 
+      - 6379
